@@ -1,101 +1,149 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Pompiere", sans-serif;
-}
-
 body {
-    padding-top: 20px;
-    padding-right: 100px;
-    padding-left: 100px;
-    
+  padding-bottom: 120px;
 }
 
-.conteudo {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container {
+  padding-right: 480px;
 }
 
-.caixa-texto {
-    width: 600px;
+.caixa-texto p {
+  max-width: 520px;
+  line-height: 1.6;
+  word-break: break-word;
+  margin-top: 16px;
+  font-size: 16px;
 }
 
-h1 {
-    color: #333333;
-    font-size: 60px;
-    font-weight: bold;
 
+.caixa-texto button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 40px;
+  border: none;
+  background: #017143;
+  color: #fff;
+  cursor: pointer;
 }
 
-span {
-    color: #017143;
-    font-size: 70px;
-    font-weight: 900;
-}
 
-p {
-    font-size: 16px;
-
-}
-
-button {
-    background: #017143;
-    color: #ffffff;
-    border-radius: 40px;
-    border: none;
-    padding: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-button:hover {
-    background: #01331e;
-}
-
-.caixa-imagem{
-    width: 600px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 250px;
-
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-}
-.botao-menu {
-    width: 60px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.botao-menu:hover{
-    transform: translateY(-30px);
-}
-.starbucks {
-    width: 340px;
+.caixa-imagem {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .circulo {
-    width: 100%;
-    height: 100%;
-    background:#017143;
+  position: fixed;
+  top: 50%;
+  right: -300px;
+  transform: translateY(-50%);
+  width: 900px;
+  height: 900px;
+  background: #017143;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.starbucks {
+  position: fixed;
+  top: 50%;
+  right: 120px;
+  transform: translateY(-50%);
+  width: 360px;
+  z-index: 1;
+}
+
+
+/* Menu flutuante */
+.menu-flutuante {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+  display: flex;
+  gap: 12px;
+
+
+  background: #02be70;
+  padding: 12px 20px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+
+.botao-menu {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+.botao-menu:hover {
+  transform: translateY(-10px);
+}
+
+
+
+@media (max-width: 1024px) {
+
+  /* Remove elementos fixos */
+  .circulo {
     position: absolute;
-    top: 0;
-    left: 0;
-    clip-path: circle(600px at right 800px);
-    z-index: -1;
+    top: auto;
+    right: -200px;
+    bottom: -200px;
+    transform: none;
+    width: 600px;
+    height: 600px;
+  }
+
+  .starbucks {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 260px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Layout em coluna */
+  .conteudo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container {
+    padding-right: 20px;
+  }
+
+  .caixa-texto {
+    max-width: 100%;
+  }
 }
 
-.logo {
-    width: 80px;
-}
+@media (max-width: 480px) {
+  .circulo {
+    width: 420px;
+    height: 420px;
+    right: -150px;
+    bottom: -150px;
+  }
 
-.imagem-copo {
-    width: 340px;
+  .starbucks {
+    width: 200px;
+  }
+
+  .menu-flutuante {
+    bottom: 10px;
+    padding: 10px 16px;
+  }
+
+  .botao-menu {
+    width: 42px;
+  }
 }
