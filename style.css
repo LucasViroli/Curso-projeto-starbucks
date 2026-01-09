@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
 }
-html, body {
+
+html,
+body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -40,24 +42,28 @@ html, body {
 
 .caixa-imagem {
   position: fixed;
-  right: 80px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
+  pointer-events: none;
 }
 
 
 .circulo {
   position: absolute;
-  width: 900px;
-  height: 900px;
-  right: -200px;
-  top: -200px;
+  width: 1100px;
+  height: 1100px;
+  right: -350px;
+  /* empurra para fora para não aparecer borda */
+  top: -350px;
+  /* empurra para cima */
   background: #017143;
   border-radius: 50%;
   z-index: -1;
 }
+
 
 .starbucks {
   position: absolute;
@@ -97,7 +103,8 @@ html, body {
 .botao-menu:hover {
   transform: translateY(-10px);
 }
-  @media (max-height: 2408px) and (max-width: 1080px) {
+
+@media (max-height: 2408px) and (max-width: 1080px) {
 
   .circulo {
     width: 360px;
@@ -111,49 +118,45 @@ html, body {
     left: 80px;
   }
 }
-  @media (max-width: 1024px) {
 
-  /* texto volta ao normal */
-  .caixa-texto p {
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: break-word;
-    max-width: 100%;
+@media (max-width: 1024px) {
+
+  /* layout em coluna */
+  .container {
+    padding-right: 0;
   }
 
-  /* layout em coluna, texto íntegro */
   .conteudo {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 20px;
+    gap: 20px;
   }
 
-  /* CAIXA IMAGEM vira referência */
+  /* texto normal, sem quebrar */
+  .caixa-texto p {
+    white-space: normal;
+    word-break: normal;
+  }
+
+  /* imagem volta a ser relativa (NÃO VAI PARA O FINAL DA PÁGINA) */
   .caixa-imagem {
     position: relative;
     width: 100%;
-    height: 320px;
-    right: auto;
-    top: auto;
-    transform: none;
+    height: 280px;
   }
 
-  /* círculo visível à esquerda */
+  /* círculo pequeno, à esquerda do texto */
   .circulo {
-    position: absolute;
-    top: 20px;
-    left: -100px;
-    width: 320px;
-    height: 320px;
+    left: -120px;
+    top: -40px;
+    width: 360px;
+    height: 360px;
   }
 
-  /* copo em cima do círculo, à esquerda */
+  /* copo alinhado em cima do círculo */
   .starbucks {
-    position: absolute;
-    top: 60px;
-    left: 60px;
+    left: 40px;
+    top: 20px;
     width: 180px;
   }
 }
@@ -161,15 +164,16 @@ html, body {
 @media (max-width: 480px) {
 
   .circulo {
-    width: 220px;
-    height: 220px;
-    left: -60px;
-    top: 140px;
+    width: 260px;
+    height: 260px;
+    left: -90px;
+    top: -20px;
   }
 
   .starbucks {
-    width: 140px;
-    margin-top: 30px;
+    width: 150px;
+    left: 40px;
+    top: 50px;
   }
 
   .caixa-texto h1 {
