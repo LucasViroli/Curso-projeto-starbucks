@@ -121,42 +121,31 @@ body {
 
 @media (max-width: 1024px) {
 
-  /* layout em coluna */
-  .container {
-    padding-right: 0;
-  }
-
   .conteudo {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: block;
+    text-align: left;
   }
 
-  /* texto normal, sem quebrar */
-  .caixa-texto p {
-    white-space: normal;
-    word-break: normal;
-  }
-
-  /* imagem volta a ser relativa (NÃO VAI PARA O FINAL DA PÁGINA) */
   .caixa-imagem {
     position: relative;
     width: 100%;
-    height: 280px;
+    min-height: 260px;
   }
 
-  /* círculo pequeno, à esquerda do texto */
+  /* círculo menor, alinhado à direita do texto */
   .circulo {
-    left: -120px;
-    top: -40px;
-    width: 360px;
-    height: 360px;
+    position: absolute;
+    right: -130px;
+    top: 0;
+    width: 320px;
+    height: 320px;
   }
 
-  /* copo alinhado em cima do círculo */
+  /* copo sobre o círculo, também à direita */
   .starbucks {
-    left: 40px;
-    top: 20px;
+    position: absolute;
+    right: 20px;
+    top: 40px;
     width: 180px;
   }
 }
@@ -164,16 +153,16 @@ body {
 @media (max-width: 480px) {
 
   .circulo {
-    width: 260px;
-    height: 260px;
-    left: -90px;
-    top: -20px;
+    width: 220px;
+    height: 220px;
+    right: -90px;
+    top: 20px;
   }
 
   .starbucks {
-    width: 150px;
-    left: 40px;
-    top: 50px;
+    width: 140px;
+    right: 10px;
+    top: 60px;
   }
 
   .caixa-texto h1 {
@@ -182,5 +171,6 @@ body {
 
   .caixa-texto p {
     font-size: 13px;
+    max-width: 95%;
   }
 }
