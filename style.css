@@ -89,56 +89,27 @@ body {
 
 @media (max-width: 1024px) {
 
-  * {
-    text-align: left
+  .circulo {
+    position: fixed;
+    left: -120px;
+    top: 120px;
+    width: 420px;
+    height: 420px;
+    transform: none;
+  }
+
+  .starbucks {
+    position: fixed;
+    left: 60px;
+    top: 160px;
+    width: 180px;
+    transform: none;
   }
 
   body {
-    overflow-y: hidden;
-  
-  }
-
-  .container {
-    padding: 20px;
-  }
-
-  .conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-items: flex-start;
-  }
-
-  .caixa-texto {
-    max-width: 95%;
-  }
-
-  /* CÍRCULO POSICIONADO À ESQUERDA E MENOR */
-  .circulo {
-    position: fixed;
-    width: 280px;
-    height: 280px;
-
-    /* define à ESQUERDA */
-    left: 10px;
-    top: 160px;
-
-    /* garante fundo atrás */
-    z-index: 1;
+    overflow-y: hidden; /* sem scroll */
   }
 }
-
-  /* COPO À ESQUERDA E REDUZIDO */
-  .starbucks {
-    position: fixed;
-
-    /* ALINHADO COM O CÍRCULO */
-    left: 70px;
-    top: 180px;
-
-    width: 160px;
-    z-index: 2; /* acima do círculo */
-  }
 
 
 @media (max-width: 480px) {
