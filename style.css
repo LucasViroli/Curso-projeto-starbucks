@@ -102,31 +102,50 @@ html, body {
 
 @media (max-width: 1024px) {
 
-  .area-copo {
-    right: auto;
-    left: 0;
-    top: 40%;
-    transform: translateY(-50%);
-    width: 360px;
-    height: 360px;
+  @media (max-width: 1024px) {
+
+  /* texto não quebra letra por linha */
+  .caixa-texto p {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    width: 100%;
   }
 
-  .circulo {
-    width: 480px;
-    height: 480px;
-    right: -140px;
-    top: -120px;
-  }
-
-  .starbucks {
-    width: 200px;
-    right: 40px;
-    top: 120px;
-  }
-
+  /* força layout em coluna sem esmagar texto */
   .conteudo {
-    padding-right: 12px;
-    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* garante que a área do copo seja referência */
+  .caixa-imagem {
+    position: relative;
+    width: 100%;
+    min-height: 320px;
+  }
+
+  /* círculo menor, à esquerda */
+  .circulo {
+    position: absolute;
+    top: 40px;
+    left: -120px;
+    width: 380px;
+    height: 380px;
+    transform: none;
+    z-index: -1;
+  }
+
+  /* copo sobre o círculo */
+  .starbucks {
+    position: absolute;
+    top: 80px;
+    left: 60px;
+    width: 200px;
+    transform: none;
+    z-index: 1;
   }
 }
 
