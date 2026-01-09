@@ -89,62 +89,59 @@ body {
 
 @media (max-width: 1024px) {
 
-  /* Círculo vira fundo decorativo */
-  .circulo {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 520px;
-    height: 520px;
-    right: auto;
-    bottom: auto;
+  .container {
+    padding: 20px;
   }
 
-  /* Copo centralizado dentro do círculo */
-  .starbucks {
-    position: relative;
-    width: 260px;
-    margin: 0 auto;
-    display: block;
-    top: -40px;
-  }
-
-  /* Layout em coluna */
   .conteudo {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .container {
-    padding-right: 0;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .caixa-texto {
-    max-width: 90%;
+    max-width: 95%;
+  }
+
+  /* CÍRCULO POSICIONADO À ESQUERDA E MENOR */
+  .circulo {
+    position: absolute;
+    left: -80px;
+    top: 120px;
+    width: 300px;
+    height: 300px;
+  }
+
+  /* COPO À ESQUERDA E REDUZIDO */
+  .starbucks {
+    position: relative;
+    width: 180px;
+    left: 0;
+    margin-left: 10px;
+    margin-top: 40px;
   }
 }
 
 @media (max-width: 480px) {
 
   .circulo {
-    width: 420px;
-    height: 420px;
-    top: 65%;
+    width: 220px;
+    height: 220px;
+    left: -60px;
+    top: 140px;
   }
 
   .starbucks {
-    width: 200px;
-    top: -20px;
+    width: 140px;
+    margin-top: 30px;
   }
 
   .caixa-texto h1 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .caixa-texto p {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
