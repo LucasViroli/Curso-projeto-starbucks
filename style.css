@@ -89,63 +89,62 @@ body {
 
 @media (max-width: 1024px) {
 
-  /* Remove elementos fixos */
+  /* Círculo vira fundo decorativo */
   .circulo {
     position: absolute;
-    top: auto;
-    right: -200px;
-    bottom: -200px;
-    transform: none;
-    width: 600px;
-    height: 600px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px;
+    height: 520px;
+    right: auto;
+    bottom: auto;
   }
 
+  /* Copo centralizado dentro do círculo */
   .starbucks {
     position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
     width: 260px;
     margin: 0 auto;
     display: block;
+    top: -40px;
   }
 
   /* Layout em coluna */
   .conteudo {
     display: flex;
-    align-items: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
   .container {
-    padding-right: 20px;
+    padding-right: 0;
   }
 
   .caixa-texto {
-    max-width: 100%;
+    max-width: 90%;
   }
 }
 
 @media (max-width: 480px) {
+
   .circulo {
     width: 420px;
     height: 420px;
-    right: -150px;
-    bottom: -150px;
+    top: 65%;
   }
 
   .starbucks {
     width: 200px;
+    top: -20px;
   }
 
-  .menu-flutuante {
-    bottom: 10px;
-    padding: 10px 16px;
+  .caixa-texto h1 {
+    font-size: 26px;
   }
 
-  .botao-menu {
-    width: 42px;
+  .caixa-texto p {
+    font-size: 14px;
   }
 }
