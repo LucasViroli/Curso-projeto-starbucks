@@ -98,10 +98,6 @@ html, body {
   transform: translateY(-10px);
 }
 
-
-
-@media (max-width: 1024px) {
-
   @media (max-width: 1024px) {
 
   /* texto não quebra letra por linha */
