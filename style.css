@@ -97,54 +97,66 @@ html, body {
 .botao-menu:hover {
   transform: translateY(-10px);
 }
+  @media (max-height: 2408px) and (max-width: 1080px) {
 
+  .circulo {
+    width: 360px;
+    height: 360px;
+    left: -140px;
+  }
+
+  .starbucks {
+    width: 200px;
+    top: 90px;
+    left: 80px;
+  }
+}
   @media (max-width: 1024px) {
 
-  /* texto não quebra letra por linha */
+  /* texto volta ao normal */
   .caixa-texto p {
     white-space: normal;
     word-break: normal;
     overflow-wrap: break-word;
-    width: 100%;
+    max-width: 100%;
   }
 
-  /* força layout em coluna sem esmagar texto */
+  /* layout em coluna, texto íntegro */
   .conteudo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    padding: 20px;
   }
 
-  /* garante que a área do copo seja referência */
+  /* CAIXA IMAGEM vira referência */
   .caixa-imagem {
     position: relative;
     width: 100%;
-    min-height: 320px;
+    height: 320px;
+    right: auto;
+    top: auto;
+    transform: none;
   }
 
-  /* círculo menor, à esquerda */
+  /* círculo visível à esquerda */
   .circulo {
     position: absolute;
-    top: 40px;
-    left: -120px;
-    width: 380px;
-    height: 380px;
-    transform: none;
-    z-index: -1;
+    top: 20px;
+    left: -100px;
+    width: 320px;
+    height: 320px;
   }
 
-  /* copo sobre o círculo */
+  /* copo em cima do círculo, à esquerda */
   .starbucks {
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 60px;
-    width: 200px;
-    transform: none;
-    z-index: 1;
+    width: 180px;
   }
 }
-
 
 @media (max-width: 480px) {
 
